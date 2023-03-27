@@ -10,7 +10,7 @@ contract Whitelist is Ownable, IWhitelist {
   mapping (address=>bool) public members;
   uint256 public membersLenght = 0;
 
-  constructor() public { 
+  constructor() { 
     add(msg.sender);
   }
 
@@ -19,7 +19,7 @@ contract Whitelist is Ownable, IWhitelist {
   }
 
   function add(address member) public onlyOwner {
-    require(member == address(0), "Address not allowed");
+    require(member != address(0), "Address not allowed");
     members[member] = true;
     membersLenght += 1;
   }
