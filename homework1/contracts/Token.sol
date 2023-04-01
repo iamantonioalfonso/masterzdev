@@ -46,4 +46,12 @@ contract Token is ERC20, Ownable {
     require(contractAddress != address(0), "Address not allowed");
     blacklistAddress = contractAddress;
   }
+
+  function getWhitelistContract() external view returns (address) {
+    return whitelistAddress;
+  }
+
+  function getBlacklistContract() external view returns (address) {
+    return blacklistAddress;
+  }
 }

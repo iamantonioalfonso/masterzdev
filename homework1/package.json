@@ -22,6 +22,6 @@
     "@openzeppelin/test-helpers": "0.5.16",
     "eth-gas-reporter": "^0.2.25",
     "solidity-coverage": "0.7.16",
-    "truffle": "^5.8.1"
+    "truffle": "5.5.24"
   }
 }
